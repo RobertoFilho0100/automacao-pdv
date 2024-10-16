@@ -1,61 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-10-15T18:40:46.979294" rpa="false" schemaversion="5">
-<suite id="s1" name="Login-Test" source="c:\Users\rober\dev\pdv-test-automation\Tests\login-test.robot">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-16T10:35:21.574584" rpa="false" schemaversion="5">
+<suite id="s1" name="Login-Test" source="c:\Users\miranda.henriques\dev\automacao-pdv\Tests\login-test.robot">
 <test id="s1-t1" name="Login no PDV" line="7">
 <kw name="Abrir PDV" owner="Abrir-E-Fechar-PDV" type="SETUP">
 <kw name="Launch Application" owner="FlaUILibrary">
 <arg>C:\\Program Files (x86)\\Softcom Tecnologia\\Softshop Caixa\\Softshop.exe</arg>
 <doc>Launches an application.</doc>
-<status status="PASS" start="2024-10-15T18:40:48.154866" elapsed="0.108624"/>
+<status status="PASS" start="2024-10-16T10:35:21.912815" elapsed="0.065999"/>
 </kw>
-<status status="PASS" start="2024-10-15T18:40:48.152716" elapsed="0.110774"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-15T18:41:13.265048" level="INFO">Slept 25 seconds.</msg>
-<arg>25</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-15T18:40:48.264491" elapsed="25.010800"/>
+<status status="PASS" start="2024-10-16T10:35:21.911814" elapsed="0.067000"/>
 </kw>
 <kw name="Informar senha valida" owner="loginPage">
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${login.senha}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-16T10:35:21.979814" elapsed="9.428992"/>
+</kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-15T18:41:13.278743" elapsed="0.496782"/>
+<status status="PASS" start="2024-10-16T10:35:31.408806" elapsed="0.213806"/>
 </kw>
 <kw name="Set Text To Textbox" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <arg>${PDV_SENHA}</arg>
 <doc>Inputs value to a textbox module.</doc>
-<status status="PASS" start="2024-10-15T18:41:13.775870" elapsed="0.173153"/>
+<status status="PASS" start="2024-10-16T10:35:31.622850" elapsed="0.114076"/>
 </kw>
-<status status="PASS" start="2024-10-15T18:41:13.277746" elapsed="0.671277"/>
+<status status="PASS" start="2024-10-16T10:35:21.979814" elapsed="9.758111"/>
 </kw>
 <kw name="Clicar no botao Login" owner="loginPage">
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.btnLogin}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-15T18:41:13.950023" elapsed="0.242409"/>
+<status status="PASS" start="2024-10-16T10:35:31.737925" elapsed="0.186086"/>
 </kw>
-<status status="PASS" start="2024-10-15T18:41:13.950023" elapsed="0.242409"/>
+<status status="PASS" start="2024-10-16T10:35:31.737925" elapsed="0.186086"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-15T18:41:24.193979" level="INFO">Slept 10 seconds.</msg>
+<msg time="2024-10-16T10:35:41.925295" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-15T18:41:14.192432" elapsed="10.002142"/>
+<status status="PASS" start="2024-10-16T10:35:31.925012" elapsed="10.011057"/>
 </kw>
 <kw name="Fechar PDV" owner="Abrir-E-Fechar-PDV" type="TEARDOWN">
 <kw name="Close Application By Name" owner="FlaUILibrary">
 <arg>Softshop.exe</arg>
 <doc>Closes the attached application by name.</doc>
-<status status="PASS" start="2024-10-15T18:41:24.200436" elapsed="0.084303"/>
+<status status="PASS" start="2024-10-16T10:35:41.937069" elapsed="0.028729"/>
 </kw>
-<status status="PASS" start="2024-10-15T18:41:24.197438" elapsed="0.088300"/>
+<status status="PASS" start="2024-10-16T10:35:41.936069" elapsed="0.029729"/>
 </kw>
 <tag>Demo</tag>
-<status status="PASS" start="2024-10-15T18:40:48.151702" elapsed="36.135037"/>
+<status status="PASS" start="2024-10-16T10:35:21.911814" elapsed="20.054985"/>
 </test>
-<status status="PASS" start="2024-10-15T18:40:46.987321" elapsed="37.300419"/>
+<status status="PASS" start="2024-10-16T10:35:21.586585" elapsed="20.381213"/>
 </suite>
 <statistics>
 <total>
