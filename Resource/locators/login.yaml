@@ -1,3 +1,6 @@
 login:
   senha: //Edit[@AutomationId="txtSenha"]
   btnLogin: //Button[@Name="Logar"]
+  windowCredenciaisInvalidas: //Window[@Name="Aviso"]
+  msgCredenciaisInvalidas: //Text[@AutomationId="65535"]
+  botaoFecharWindowCredenciaisInvalidas: //Button[@Name="OK"]

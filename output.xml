@@ -1,72 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-16T10:35:21.574584" rpa="false" schemaversion="5">
-<suite id="s1" name="Login-Test" source="c:\Users\miranda.henriques\dev\automacao-pdv\Tests\login-test.robot">
-<test id="s1-t1" name="Login no PDV" line="7">
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-10-16T22:15:51.081126" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="c:\Users\rober\dev\pdv-test-automation\Tests\LoginTest.robot">
+<test id="s1-t1" name="Login no PDV com credenciais invalidas" line="13">
 <kw name="Abrir PDV" owner="Abrir-E-Fechar-PDV" type="SETUP">
 <kw name="Launch Application" owner="FlaUILibrary">
 <arg>C:\\Program Files (x86)\\Softcom Tecnologia\\Softshop Caixa\\Softshop.exe</arg>
 <doc>Launches an application.</doc>
-<status status="PASS" start="2024-10-16T10:35:21.912815" elapsed="0.065999"/>
+<status status="PASS" start="2024-10-16T22:15:53.368177" elapsed="0.289422"/>
 </kw>
-<status status="PASS" start="2024-10-16T10:35:21.911814" elapsed="0.067000"/>
+<status status="PASS" start="2024-10-16T22:15:53.368177" elapsed="0.289422"/>
 </kw>
-<kw name="Informar senha valida" owner="loginPage">
+<kw name="Informar senha invalida" owner="LoginPage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-16T10:35:21.979814" elapsed="9.428992"/>
+<status status="PASS" start="2024-10-16T22:15:53.658612" elapsed="21.643668"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-16T10:35:31.408806" elapsed="0.213806"/>
+<status status="PASS" start="2024-10-16T22:16:15.305719" elapsed="1.134791"/>
 </kw>
 <kw name="Set Text To Textbox" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
-<arg>${PDV_SENHA}</arg>
+<arg>${PDV_SENHA_INVALIDA}</arg>
 <doc>Inputs value to a textbox module.</doc>
-<status status="PASS" start="2024-10-16T10:35:31.622850" elapsed="0.114076"/>
+<status status="PASS" start="2024-10-16T22:16:16.441575" elapsed="0.994262"/>
 </kw>
-<status status="PASS" start="2024-10-16T10:35:21.979814" elapsed="9.758111"/>
+<status status="PASS" start="2024-10-16T22:15:53.658612" elapsed="23.777225"/>
 </kw>
-<kw name="Clicar no botao Login" owner="loginPage">
+<kw name="Clicar no botao Login" owner="LoginPage">
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.btnLogin}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-16T10:35:31.737925" elapsed="0.186086"/>
+<status status="PASS" start="2024-10-16T22:16:17.440663" elapsed="0.940014"/>
 </kw>
-<status status="PASS" start="2024-10-16T10:35:31.737925" elapsed="0.186086"/>
+<status status="PASS" start="2024-10-16T22:16:17.439248" elapsed="0.941429"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-16T10:35:41.925295" level="INFO">Slept 10 seconds.</msg>
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-16T10:35:31.925012" elapsed="10.011057"/>
+<kw name="Validar mensagem usuario ou senha invalidos" owner="LoginPage">
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${login.windowCredenciaisInvalidas}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-16T22:16:18.384316" elapsed="0.471900"/>
+</kw>
+<kw name="Get Text From Textbox" owner="FlaUILibrary">
+<msg time="2024-10-16T22:16:19.287953" level="INFO">${error_msg} = Usuário ou senha inválido</msg>
+<var>${error_msg}</var>
+<arg>${login.msgCredenciaisInvalidas}</arg>
+<doc>Return text from textbox element.</doc>
+<status status="PASS" start="2024-10-16T22:16:18.856216" elapsed="0.439424"/>
+</kw>
+<return>
+<value>${error_msg}</value>
+<status status="PASS" start="2024-10-16T22:16:19.297096" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-16T22:16:19.298613" level="INFO">${error_msg} = Usuário ou senha inválido</msg>
+<var>${error_msg}</var>
+<status status="PASS" start="2024-10-16T22:16:18.384316" elapsed="0.917169"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${error_msg}</arg>
+<arg>Usuário ou senha inválido</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-16T22:16:19.304670" elapsed="0.001111"/>
+</kw>
+<kw name="Fechar mensagem usuario ou senha invalidos" owner="LoginPage">
+<kw name="Click" owner="FlaUILibrary">
+<arg>${login.botaoFecharWindowCredenciaisInvalidas}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-16T22:16:19.309894" elapsed="0.686946"/>
+</kw>
+<status status="PASS" start="2024-10-16T22:16:19.307367" elapsed="0.692003"/>
 </kw>
 <kw name="Fechar PDV" owner="Abrir-E-Fechar-PDV" type="TEARDOWN">
 <kw name="Close Application By Name" owner="FlaUILibrary">
 <arg>Softshop.exe</arg>
 <doc>Closes the attached application by name.</doc>
-<status status="PASS" start="2024-10-16T10:35:41.937069" elapsed="0.028729"/>
+<status status="PASS" start="2024-10-16T22:16:20.009311" elapsed="0.061689"/>
 </kw>
-<status status="PASS" start="2024-10-16T10:35:41.936069" elapsed="0.029729"/>
+<status status="PASS" start="2024-10-16T22:16:20.006488" elapsed="0.064512"/>
 </kw>
-<tag>Demo</tag>
-<status status="PASS" start="2024-10-16T10:35:21.911814" elapsed="20.054985"/>
+<tag>credenciais_invalidas</tag>
+<tag>erro</tag>
+<tag>login</tag>
+<status status="PASS" start="2024-10-16T22:15:53.368177" elapsed="26.702823"/>
 </test>
-<status status="PASS" start="2024-10-16T10:35:21.586585" elapsed="20.381213"/>
+<status status="PASS" start="2024-10-16T22:15:51.088724" elapsed="28.985633"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Demo</stat>
+<stat pass="1" fail="0" skip="0">credenciais_invalidas</stat>
+<stat pass="1" fail="0" skip="0">erro</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login-Test">Login-Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-10-16T22:15:53.366970" level="WARN">Error in file 'c:\Users\rober\dev\pdv-test-automation\Resource\pages\LoginPage.resource' on line 25: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

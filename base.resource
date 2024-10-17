@@ -11,6 +11,6 @@ Variables    Resource/locators/login.yaml
 
 
 ### Pages
-Resource    Resource/pages/loginPage.resource
+Resource    Resource/pages/LoginPage.resource
 
 *** Variables ***
