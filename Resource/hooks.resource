@@ -1,10 +1,8 @@
 *** Settings ***
-Library    FlaUILibrary
+Resource    ../base.resource
 
 *** Keywords ***
-BeforeTestSetup
-    Launch Application    C:\\Program Files (x86)\\Softcom Tecnologia\\Softshop Caixa\\Softshop.exe
-
-
-AfterTestSetup
-    Close Application By Name    Softshop.exe
+Realizar login no PDV
+    Informar senha valida
+    Clicar no botao Login
+    Validar que PDV abriu e carregou os dados

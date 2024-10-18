@@ -1,0 +1,2 @@
+informarCliente:
+  btnConfirmar: //Button[@AutomationId="btnConfimar"]

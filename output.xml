@@ -1,106 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-10-16T22:15:51.081126" rpa="false" schemaversion="5">
-<suite id="s1" name="LoginTest" source="c:\Users\rober\dev\pdv-test-automation\Tests\LoginTest.robot">
-<test id="s1-t1" name="Login no PDV com credenciais invalidas" line="13">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-17T17:34:04.020544" rpa="false" schemaversion="5">
+<suite id="s1" name="VendaTest" source="c:\Users\miranda.henriques\dev\automacao-pdv\Tests\VendaTest.robot">
+<test id="s1-t1" name="Realizar venda" line="7">
 <kw name="Abrir PDV" owner="Abrir-E-Fechar-PDV" type="SETUP">
 <kw name="Launch Application" owner="FlaUILibrary">
 <arg>C:\\Program Files (x86)\\Softcom Tecnologia\\Softshop Caixa\\Softshop.exe</arg>
 <doc>Launches an application.</doc>
-<status status="PASS" start="2024-10-16T22:15:53.368177" elapsed="0.289422"/>
+<status status="PASS" start="2024-10-17T17:34:04.395767" elapsed="0.057582"/>
 </kw>
-<status status="PASS" start="2024-10-16T22:15:53.368177" elapsed="0.289422"/>
+<status status="PASS" start="2024-10-17T17:34:04.394767" elapsed="0.058582"/>
 </kw>
-<kw name="Informar senha invalida" owner="LoginPage">
+<kw name="Realizar login no PDV" owner="Hooks">
+<kw name="Informar senha valida" owner="LoginPage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-16T22:15:53.658612" elapsed="21.643668"/>
+<status status="PASS" start="2024-10-17T17:34:04.455349" elapsed="7.919828"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-16T22:16:15.305719" elapsed="1.134791"/>
+<status status="PASS" start="2024-10-17T17:34:12.375177" elapsed="0.222581"/>
 </kw>
 <kw name="Set Text To Textbox" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
-<arg>${PDV_SENHA_INVALIDA}</arg>
+<arg>${PDV_SENHA_VALIDA}</arg>
 <doc>Inputs value to a textbox module.</doc>
-<status status="PASS" start="2024-10-16T22:16:16.441575" elapsed="0.994262"/>
+<status status="PASS" start="2024-10-17T17:34:12.597758" elapsed="0.127558"/>
 </kw>
-<status status="PASS" start="2024-10-16T22:15:53.658612" elapsed="23.777225"/>
+<status status="PASS" start="2024-10-17T17:34:04.455349" elapsed="8.269967"/>
 </kw>
 <kw name="Clicar no botao Login" owner="LoginPage">
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.btnLogin}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-16T22:16:17.440663" elapsed="0.940014"/>
+<status status="PASS" start="2024-10-17T17:34:12.725316" elapsed="0.203569"/>
 </kw>
-<status status="PASS" start="2024-10-16T22:16:17.439248" elapsed="0.941429"/>
+<status status="PASS" start="2024-10-17T17:34:12.725316" elapsed="0.203569"/>
 </kw>
-<kw name="Validar mensagem usuario ou senha invalidos" owner="LoginPage">
+<kw name="Validar que PDV abriu e carregou os dados" owner="HomePage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
-<arg>${login.windowCredenciaisInvalidas}</arg>
+<arg>${homepage.btnNotificacoes}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-16T22:16:18.384316" elapsed="0.471900"/>
+<status status="PASS" start="2024-10-17T17:34:12.929886" elapsed="4.631425"/>
 </kw>
-<kw name="Get Text From Textbox" owner="FlaUILibrary">
-<msg time="2024-10-16T22:16:19.287953" level="INFO">${error_msg} = Usuário ou senha inválido</msg>
-<var>${error_msg}</var>
-<arg>${login.msgCredenciaisInvalidas}</arg>
-<doc>Return text from textbox element.</doc>
-<status status="PASS" start="2024-10-16T22:16:18.856216" elapsed="0.439424"/>
+<status status="PASS" start="2024-10-17T17:34:12.928885" elapsed="4.632426"/>
 </kw>
-<return>
-<value>${error_msg}</value>
-<status status="PASS" start="2024-10-16T22:16:19.297096" elapsed="0.000000"/>
-</return>
-<msg time="2024-10-16T22:16:19.298613" level="INFO">${error_msg} = Usuário ou senha inválido</msg>
-<var>${error_msg}</var>
-<status status="PASS" start="2024-10-16T22:16:18.384316" elapsed="0.917169"/>
+<status status="PASS" start="2024-10-17T17:34:04.454349" elapsed="13.106962"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${error_msg}</arg>
-<arg>Usuário ou senha inválido</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-10-16T22:16:19.304670" elapsed="0.001111"/>
+<kw name="Iniciar venda pela tecla de atalho" owner="HomePage">
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>F1</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-17T17:34:17.562310" elapsed="0.101999"/>
 </kw>
-<kw name="Fechar mensagem usuario ou senha invalidos" owner="LoginPage">
+<status status="PASS" start="2024-10-17T17:34:17.562310" elapsed="0.101999"/>
+</kw>
+<kw name="Informar cliente - confirmar sem informar cliente" owner="InformarClientePage">
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${informarCliente.btnConfirmar}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-17T17:34:17.665310" elapsed="0.133563"/>
+</kw>
 <kw name="Click" owner="FlaUILibrary">
-<arg>${login.botaoFecharWindowCredenciaisInvalidas}</arg>
+<arg>${informarCliente.btnConfirmar}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-16T22:16:19.309894" elapsed="0.686946"/>
+<status status="PASS" start="2024-10-17T17:34:17.798873" elapsed="0.199625"/>
 </kw>
-<status status="PASS" start="2024-10-16T22:16:19.307367" elapsed="0.692003"/>
+<status status="PASS" start="2024-10-17T17:34:17.664309" elapsed="0.334189"/>
+</kw>
+<kw name="Informar produto na venda" owner="VendaPage">
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${venda.logoTelaVendas}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-17T17:34:17.999499" elapsed="0.154561"/>
+</kw>
+<kw name="Click" owner="FlaUILibrary">
+<arg>${venda.inputCodigo}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-17T17:34:18.154060" elapsed="0.299548"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-17T17:34:18.453608" level="INFO">2</msg>
+<arg>${produto}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-17T17:34:18.453608" elapsed="0.002003"/>
+</kw>
+<kw name="Set Text To Textbox" owner="FlaUILibrary">
+<arg>${venda.inputCodigo}</arg>
+<arg>${produto}</arg>
+<doc>Inputs value to a textbox module.</doc>
+<status status="PASS" start="2024-10-17T17:34:18.455611" elapsed="0.163039"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>ENTER</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-17T17:34:18.618650" elapsed="0.101999"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2024-10-17T17:34:17.999499" elapsed="0.721150"/>
+</kw>
+<kw name="Fechar venda" owner="VendaPage">
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>F3</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-17T17:34:18.721650" elapsed="0.101162"/>
+</kw>
+<status status="PASS" start="2024-10-17T17:34:18.720649" elapsed="0.102163"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T17:34:28.822875" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T17:34:18.822812" elapsed="10.000063"/>
 </kw>
 <kw name="Fechar PDV" owner="Abrir-E-Fechar-PDV" type="TEARDOWN">
 <kw name="Close Application By Name" owner="FlaUILibrary">
+<msg time="2024-10-17T17:34:28.836876" level="FAIL">FlaUiError: Application with name 'Softshop.exe' could not be found</msg>
+<msg time="2024-10-17T17:34:28.899582" level="INFO">test_estauto_realizar_venda_1729197268840_1.jpg</msg>
+<msg time="2024-10-17T17:34:28.900584" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_estauto_realizar_venda_1729197268840_1.jpg"&gt;&lt;img src="test_estauto_realizar_venda_1729197268840_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>Softshop.exe</arg>
 <doc>Closes the attached application by name.</doc>
-<status status="PASS" start="2024-10-16T22:16:20.009311" elapsed="0.061689"/>
+<status status="FAIL" start="2024-10-17T17:34:28.824876" elapsed="0.016001">FlaUiError: Application with name 'Softshop.exe' could not be found</status>
 </kw>
-<status status="PASS" start="2024-10-16T22:16:20.006488" elapsed="0.064512"/>
+<status status="FAIL" start="2024-10-17T17:34:28.824876" elapsed="0.076707">FlaUiError: Application with name 'Softshop.exe' could not be found</status>
 </kw>
-<tag>credenciais_invalidas</tag>
-<tag>erro</tag>
-<tag>login</tag>
-<status status="PASS" start="2024-10-16T22:15:53.368177" elapsed="26.702823"/>
+<tag>sucesso</tag>
+<tag>venda</tag>
+<status status="FAIL" start="2024-10-17T17:34:04.393766" elapsed="24.508817">Teardown failed:
+FlaUiError: Application with name 'Softshop.exe' could not be found</status>
 </test>
-<status status="PASS" start="2024-10-16T22:15:51.088724" elapsed="28.985633"/>
+<status status="FAIL" start="2024-10-17T17:34:04.022544" elapsed="24.881039"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">credenciais_invalidas</stat>
-<stat pass="1" fail="0" skip="0">erro</stat>
-<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">sucesso</stat>
+<stat pass="0" fail="1" skip="0">venda</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="VendaTest">VendaTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-16T22:15:53.366970" level="WARN">Error in file 'c:\Users\rober\dev\pdv-test-automation\Resource\pages\LoginPage.resource' on line 25: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

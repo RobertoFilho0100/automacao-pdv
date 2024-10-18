@@ -22,7 +22,7 @@ Clicar no botao Login
 Validar mensagem usuario ou senha invalidos
     Wait Until Element Exist    ${login.windowCredenciaisInvalidas}
     ${error_msg}=   Get Text From Textbox    ${login.msgCredenciaisInvalidas}
-    [Return]    ${error_msg}
+    RETURN    ${error_msg}
 
 Fechar mensagem usuario ou senha invalidos
     Click    ${login.botaoFecharWindowCredenciaisInvalidas}
