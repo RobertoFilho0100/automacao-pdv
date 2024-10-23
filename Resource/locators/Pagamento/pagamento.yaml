@@ -1,0 +1,3 @@
+pagamento:
+  logoTelaPagamento: //Pane[@AutomationId="PictureBox2"]
+  formaPagamentoDinheiro: //Edit[@AutomationId="_txtDINHEIRO"]

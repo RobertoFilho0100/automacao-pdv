@@ -11,6 +11,7 @@ Variables    Resource/locators/login/login.yaml
 Variables    Resource/locators/HomePage/homepage.yaml
 Variables    Resource/locators/InformarCliente/informarCliente.yaml
 Variables    Resource/locators/VendaPage/venda.yaml
+Variables    Resource/locators/Pagamento/pagamento.yaml
 
 
 ### Pages

@@ -1,147 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-17T17:34:04.020544" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-23T17:39:17.540212" rpa="false" schemaversion="5">
 <suite id="s1" name="VendaTest" source="c:\Users\miranda.henriques\dev\automacao-pdv\Tests\VendaTest.robot">
-<test id="s1-t1" name="Realizar venda" line="7">
+<test id="s1-t1" name="Realizar venda" line="8">
 <kw name="Abrir PDV" owner="Abrir-E-Fechar-PDV" type="SETUP">
 <kw name="Launch Application" owner="FlaUILibrary">
 <arg>C:\\Program Files (x86)\\Softcom Tecnologia\\Softshop Caixa\\Softshop.exe</arg>
 <doc>Launches an application.</doc>
-<status status="PASS" start="2024-10-17T17:34:04.395767" elapsed="0.057582"/>
+<status status="PASS" start="2024-10-23T17:39:17.923033" elapsed="0.061001"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:04.394767" elapsed="0.058582"/>
+<status status="PASS" start="2024-10-23T17:39:17.922033" elapsed="0.063001"/>
 </kw>
 <kw name="Realizar login no PDV" owner="Hooks">
 <kw name="Informar senha valida" owner="LoginPage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-17T17:34:04.455349" elapsed="7.919828"/>
+<status status="PASS" start="2024-10-23T17:39:17.986034" elapsed="13.113370"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-17T17:34:12.375177" elapsed="0.222581"/>
+<status status="PASS" start="2024-10-23T17:39:31.100404" elapsed="0.214929"/>
 </kw>
 <kw name="Set Text To Textbox" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <arg>${PDV_SENHA_VALIDA}</arg>
 <doc>Inputs value to a textbox module.</doc>
-<status status="PASS" start="2024-10-17T17:34:12.597758" elapsed="0.127558"/>
+<status status="PASS" start="2024-10-23T17:39:31.315333" elapsed="0.102436"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:04.455349" elapsed="8.269967"/>
+<status status="PASS" start="2024-10-23T17:39:17.986034" elapsed="13.431735"/>
 </kw>
 <kw name="Clicar no botao Login" owner="LoginPage">
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.btnLogin}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-17T17:34:12.725316" elapsed="0.203569"/>
+<status status="PASS" start="2024-10-23T17:39:31.418771" elapsed="0.208583"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:12.725316" elapsed="0.203569"/>
+<status status="PASS" start="2024-10-23T17:39:31.417769" elapsed="0.209585"/>
 </kw>
 <kw name="Validar que PDV abriu e carregou os dados" owner="HomePage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${homepage.btnNotificacoes}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-17T17:34:12.929886" elapsed="4.631425"/>
+<status status="PASS" start="2024-10-23T17:39:31.627354" elapsed="9.413633"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:12.928885" elapsed="4.632426"/>
+<status status="PASS" start="2024-10-23T17:39:31.627354" elapsed="9.414633"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:04.454349" elapsed="13.106962"/>
+<status status="PASS" start="2024-10-23T17:39:17.985034" elapsed="23.056953"/>
 </kw>
 <kw name="Iniciar venda pela tecla de atalho" owner="HomePage">
 <kw name="Press Key" owner="PyAutoGuiLibrary">
 <arg>F1</arg>
 <doc>Pressiona a tecla especificada.</doc>
-<status status="PASS" start="2024-10-17T17:34:17.562310" elapsed="0.101999"/>
+<status status="PASS" start="2024-10-23T17:39:41.041987" elapsed="0.102548"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:17.562310" elapsed="0.101999"/>
+<status status="PASS" start="2024-10-23T17:39:41.041987" elapsed="0.102548"/>
 </kw>
 <kw name="Informar cliente - confirmar sem informar cliente" owner="InformarClientePage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${informarCliente.btnConfirmar}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-17T17:34:17.665310" elapsed="0.133563"/>
+<status status="PASS" start="2024-10-23T17:39:41.145536" elapsed="0.147000"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${informarCliente.btnConfirmar}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-17T17:34:17.798873" elapsed="0.199625"/>
+<status status="PASS" start="2024-10-23T17:39:41.292536" elapsed="0.193559"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:17.664309" elapsed="0.334189"/>
+<status status="PASS" start="2024-10-23T17:39:41.144535" elapsed="0.341560"/>
 </kw>
 <kw name="Informar produto na venda" owner="VendaPage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${venda.logoTelaVendas}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-17T17:34:17.999499" elapsed="0.154561"/>
+<status status="PASS" start="2024-10-23T17:39:41.487095" elapsed="0.290137"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${venda.inputCodigo}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-17T17:34:18.154060" elapsed="0.299548"/>
+<status status="PASS" start="2024-10-23T17:39:41.777232" elapsed="0.284888"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-10-17T17:34:18.453608" level="INFO">2</msg>
+<msg time="2024-10-23T17:39:42.062120" level="INFO">12</msg>
 <arg>${produto}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-17T17:34:18.453608" elapsed="0.002003"/>
+<status status="PASS" start="2024-10-23T17:39:42.062120" elapsed="0.002001"/>
 </kw>
 <kw name="Set Text To Textbox" owner="FlaUILibrary">
 <arg>${venda.inputCodigo}</arg>
 <arg>${produto}</arg>
 <doc>Inputs value to a textbox module.</doc>
-<status status="PASS" start="2024-10-17T17:34:18.455611" elapsed="0.163039"/>
+<status status="PASS" start="2024-10-23T17:39:42.064121" elapsed="0.163038"/>
 </kw>
 <kw name="Press Key" owner="PyAutoGuiLibrary">
 <arg>ENTER</arg>
 <doc>Pressiona a tecla especificada.</doc>
-<status status="PASS" start="2024-10-17T17:34:18.618650" elapsed="0.101999"/>
+<status status="PASS" start="2024-10-23T17:39:42.227159" elapsed="0.102001"/>
 </kw>
-<arg>2</arg>
-<status status="PASS" start="2024-10-17T17:34:17.999499" elapsed="0.721150"/>
+<arg>12</arg>
+<status status="PASS" start="2024-10-23T17:39:41.487095" elapsed="0.842065"/>
 </kw>
 <kw name="Fechar venda" owner="VendaPage">
 <kw name="Press Key" owner="PyAutoGuiLibrary">
 <arg>F3</arg>
 <doc>Pressiona a tecla especificada.</doc>
-<status status="PASS" start="2024-10-17T17:34:18.721650" elapsed="0.101162"/>
+<status status="PASS" start="2024-10-23T17:39:42.330160" elapsed="0.112615"/>
 </kw>
-<status status="PASS" start="2024-10-17T17:34:18.720649" elapsed="0.102163"/>
+<status status="PASS" start="2024-10-23T17:39:42.329160" elapsed="0.113615"/>
+</kw>
+<kw name="Informar forma de pagamento Dinheiro" owner="PagamentoPage">
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${pagamento.logoTelaPagamento}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-23T17:39:42.443775" elapsed="0.187080"/>
+</kw>
+<kw name="Click" owner="FlaUILibrary">
+<arg>${pagamento.formaPagamentoDinheiro}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-23T17:39:42.630855" elapsed="0.289514"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>-</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-23T17:39:42.920369" elapsed="0.103091"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>F9</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-23T17:39:43.023460" elapsed="0.103348"/>
+</kw>
+<status status="PASS" start="2024-10-23T17:39:42.442775" elapsed="0.684033"/>
+</kw>
+<kw name="Lancar pagamento na venda" owner="PagamentoPage">
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>-</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-23T17:39:43.127808" elapsed="0.101517"/>
+</kw>
+<status status="PASS" start="2024-10-23T17:39:43.126808" elapsed="0.102517"/>
+</kw>
+<kw name="Finalizar venda" owner="PagamentoPage">
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>F9</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-23T17:39:43.230329" elapsed="0.101846"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-17T17:34:28.822875" level="INFO">Slept 10 seconds.</msg>
-<arg>10</arg>
+<msg time="2024-10-23T17:39:48.332597" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-17T17:34:18.822812" elapsed="10.000063"/>
+<status status="PASS" start="2024-10-23T17:39:43.332175" elapsed="5.002424"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>ESC</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-23T17:39:48.334599" elapsed="0.101427"/>
+</kw>
+<status status="PASS" start="2024-10-23T17:39:43.230329" elapsed="5.205697"/>
+</kw>
+<kw name="Aguardar retornar para a Home do PDV" owner="Hooks">
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${informarCliente.btnConfirmar}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-23T17:39:48.437026" elapsed="1.684525"/>
+</kw>
+<status status="PASS" start="2024-10-23T17:39:48.436026" elapsed="1.685525"/>
 </kw>
 <kw name="Fechar PDV" owner="Abrir-E-Fechar-PDV" type="TEARDOWN">
 <kw name="Close Application By Name" owner="FlaUILibrary">
-<msg time="2024-10-17T17:34:28.836876" level="FAIL">FlaUiError: Application with name 'Softshop.exe' could not be found</msg>
-<msg time="2024-10-17T17:34:28.899582" level="INFO">test_estauto_realizar_venda_1729197268840_1.jpg</msg>
-<msg time="2024-10-17T17:34:28.900584" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_estauto_realizar_venda_1729197268840_1.jpg"&gt;&lt;img src="test_estauto_realizar_venda_1729197268840_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>Softshop.exe</arg>
 <doc>Closes the attached application by name.</doc>
-<status status="FAIL" start="2024-10-17T17:34:28.824876" elapsed="0.016001">FlaUiError: Application with name 'Softshop.exe' could not be found</status>
+<status status="PASS" start="2024-10-23T17:39:50.122552" elapsed="0.033547"/>
 </kw>
-<status status="FAIL" start="2024-10-17T17:34:28.824876" elapsed="0.076707">FlaUiError: Application with name 'Softshop.exe' could not be found</status>
+<status status="PASS" start="2024-10-23T17:39:50.122552" elapsed="0.033547"/>
 </kw>
 <tag>sucesso</tag>
 <tag>venda</tag>
-<status status="FAIL" start="2024-10-17T17:34:04.393766" elapsed="24.508817">Teardown failed:
-FlaUiError: Application with name 'Softshop.exe' could not be found</status>
+<status status="PASS" start="2024-10-23T17:39:17.922033" elapsed="32.235065"/>
 </test>
-<status status="FAIL" start="2024-10-17T17:34:04.022544" elapsed="24.881039"/>
+<status status="PASS" start="2024-10-23T17:39:17.543210" elapsed="32.614888"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">sucesso</stat>
-<stat pass="0" fail="1" skip="0">venda</stat>
+<stat pass="1" fail="0" skip="0">sucesso</stat>
+<stat pass="1" fail="0" skip="0">venda</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="VendaTest">VendaTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="VendaTest">VendaTest</stat>
 </suite>
 </statistics>
 <errors>

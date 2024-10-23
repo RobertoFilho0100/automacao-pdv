@@ -6,3 +6,6 @@ Realizar login no PDV
     Informar senha valida
     Clicar no botao Login
     Validar que PDV abriu e carregou os dados
+
+Aguardar retornar para a Home do PDV
+    Wait Until Element Exist    ${informarCliente.btnConfirmar}
