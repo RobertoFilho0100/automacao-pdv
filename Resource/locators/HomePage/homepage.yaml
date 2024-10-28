@@ -1,3 +1,4 @@
 homepage:
   btnNotificacoes: //Pane[@AutomationId="pic"]
   btnIniciarVenda: //Button[@AutomationId="btnIniciarVenda"]
+  btnPainelMesas: //Button[@AutomationId="pnVendasMesas"]

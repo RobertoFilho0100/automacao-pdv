@@ -14,3 +14,7 @@ Iniciar venda clicando no botao
 
 Iniciar venda pela tecla de atalho
     PyAutoGuiLibrary.Press Key    F1
+
+Abrir painel de mesas
+    Click    ${homepage.btnPainelMesas}
+    Wait Until Element Exist    ${painelMesas.logoSoftcom}

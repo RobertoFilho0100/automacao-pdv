@@ -1,0 +1,7 @@
+painelMesas:
+  mesa: //Pane[@AutomationId="ControleMesa"]
+  aberturaNomeCliente: //Edit[@AutomationId="txtNomeCliente"]
+  btnSalvar: //Button[@AutomationId="btnSalvar"]
+  btnFechar: //Pane[@AutomationId="Fechar"]
+  campoCodigoProduto: //Edit[@AutomationId=txtPesquisarMercadoria]
+  logoSoftcom: //Pane[@AutomationId="PictureBox2"]
