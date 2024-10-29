@@ -8,6 +8,7 @@ Suite Teardown    Fechar PDV
 
 *** Variables ***
 ${CODIGO_PRODUTO}    12
+${QUANTIDADE_FRACIONADA}    0.5
 
 *** Test Cases ***
 Realizar venda pagamento em dinheiro
@@ -43,4 +44,14 @@ Realizar venda pagamento em TEF OFF
     Pagamento TEF OFF
     Finalizar venda
     Aguardar retornar para a Home do PDV
-    
+
+Realizar venda com quantidade fracionada
+    [Tags]    sucesso    venda    quantidade_fracionada
+    Iniciar venda pela tecla de atalho
+    Informar quantidade especifica    ${QUANTIDADE_FRACIONADA}
+    Informar produto na venda    ${CODIGO_PRODUTO}
+    Fechar venda
+    Informar pagamento    dinheiro
+    Lancar pagamento na venda
+    Finalizar venda
+    Aguardar retornar para a Home do PDV
