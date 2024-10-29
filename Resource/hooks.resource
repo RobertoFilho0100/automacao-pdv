@@ -8,4 +8,4 @@ Realizar login no PDV
     Validar que PDV abriu e carregou os dados
 
 Aguardar retornar para a Home do PDV
-    Wait Until Element Exist    ${informarCliente.btnConfirmar}
+    Wait Until Element Exist    ${homepage.btnIniciarVenda}

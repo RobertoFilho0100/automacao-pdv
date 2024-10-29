@@ -3,5 +3,7 @@ painelMesas:
   aberturaNomeCliente: //Edit[@AutomationId="txtNomeCliente"]
   btnSalvar: //Button[@AutomationId="btnSalvar"]
   btnFechar: //Pane[@AutomationId="Fechar"]
-  campoCodigoProduto: //Edit[@AutomationId=txtPesquisarMercadoria]
+  campoCodigoProduto: //Edit[@AutomationId="txtPesquisarMercadoria"]
   logoSoftcom: //Pane[@AutomationId="PictureBox2"]
+  nomeCliente: //Text[@AutomationId="lbIdentificacao"]
+  numeroMesa: //Text[@AutomationId="lbNumeroMesa"]

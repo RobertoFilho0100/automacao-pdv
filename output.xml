@@ -1,115 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-25T16:54:53.271001" rpa="false" schemaversion="5">
-<suite id="s1" name="KDSTest" source="c:\Users\miranda.henriques\dev\automacao-pdv\Tests\KDSTest.robot">
-<test id="s1-t1" name="Abrir mesa e realizar lancamento" line="10">
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-10-29T15:04:03.324555" rpa="false" schemaversion="5">
+<suite id="s1" name="PainelDeMesasTest" source="c:\Users\rober\dev\pdv-test-automation\Tests\PainelDeMesasTest.robot">
+<test id="s1-t1" name="Abrir Mesa e realizar informando cliente e lancar produto" line="8">
 <kw name="Abrir PDV" owner="Abrir-E-Fechar-PDV" type="SETUP">
 <kw name="Launch Application" owner="FlaUILibrary">
 <arg>C:\\Program Files (x86)\\Softcom Tecnologia\\Softshop Caixa\\Softshop.exe</arg>
 <doc>Launches an application.</doc>
-<status status="PASS" start="2024-10-25T16:54:53.674967" elapsed="0.060995"/>
+<status status="PASS" start="2024-10-29T15:04:04.225157" elapsed="0.142590"/>
 </kw>
-<status status="PASS" start="2024-10-25T16:54:53.674967" elapsed="0.060995"/>
+<status status="PASS" start="2024-10-29T15:04:04.223871" elapsed="0.143876"/>
 </kw>
 <kw name="Realizar login no PDV" owner="Hooks">
 <kw name="Informar senha valida" owner="LoginPage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="PASS" start="2024-10-25T16:54:53.736961" elapsed="6.494621"/>
+<status status="PASS" start="2024-10-29T15:04:04.369747" elapsed="13.452647"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-25T16:55:00.232581" elapsed="0.211523"/>
+<status status="PASS" start="2024-10-29T15:04:17.822394" elapsed="0.315168"/>
 </kw>
 <kw name="Set Text To Textbox" owner="FlaUILibrary">
 <arg>${login.senha}</arg>
 <arg>${PDV_SENHA_VALIDA}</arg>
 <doc>Inputs value to a textbox module.</doc>
-<status status="PASS" start="2024-10-25T16:55:00.444104" elapsed="0.109311"/>
+<status status="PASS" start="2024-10-29T15:04:18.137562" elapsed="0.202355"/>
 </kw>
-<status status="PASS" start="2024-10-25T16:54:53.736961" elapsed="6.816454"/>
+<status status="PASS" start="2024-10-29T15:04:04.369747" elapsed="13.970170"/>
 </kw>
 <kw name="Clicar no botao Login" owner="LoginPage">
 <kw name="Click" owner="FlaUILibrary">
 <arg>${login.btnLogin}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="PASS" start="2024-10-25T16:55:00.553415" elapsed="0.193419"/>
+<status status="PASS" start="2024-10-29T15:04:18.340918" elapsed="0.292657"/>
 </kw>
-<status status="PASS" start="2024-10-25T16:55:00.553415" elapsed="0.193419"/>
+<status status="PASS" start="2024-10-29T15:04:18.339917" elapsed="0.293658"/>
 </kw>
 <kw name="Validar que PDV abriu e carregou os dados" owner="HomePage">
 <kw name="Wait Until Element Exist" owner="FlaUILibrary">
-<msg time="2024-10-25T16:55:32.388738" level="INFO">test_estauto_abrir_mesa_e_realizar_lancamento_1729886132320_1.jpg</msg>
-<msg time="2024-10-25T16:55:32.388738" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_estauto_abrir_mesa_e_realizar_lancamento_1729886132320_1.jpg"&gt;&lt;img src="test_estauto_abrir_mesa_e_realizar_lancamento_1729886132320_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${homepage.btnNotificacoes}</arg>
+<arg>${homepage.btnKDS}</arg>
 <doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
-<status status="FAIL" start="2024-10-25T16:55:00.747837" elapsed="31.572626">Execution terminated by signal</status>
+<status status="PASS" start="2024-10-29T15:04:18.634666" elapsed="15.694003"/>
 </kw>
-<status status="FAIL" start="2024-10-25T16:55:00.746834" elapsed="31.642907">Execution terminated by signal</status>
+<status status="PASS" start="2024-10-29T15:04:18.633575" elapsed="15.695094"/>
 </kw>
-<status status="FAIL" start="2024-10-25T16:54:53.735962" elapsed="38.653779">Execution terminated by signal</status>
+<status status="PASS" start="2024-10-29T15:04:04.368747" elapsed="29.959922"/>
 </kw>
 <kw name="Abrir painel de mesas" owner="HomePage">
-<status status="NOT RUN" start="2024-10-25T16:55:32.389741" elapsed="0.000998"/>
+<kw name="Click" owner="FlaUILibrary">
+<arg>${homepage.btnPainelMesas}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-29T15:04:34.329670" elapsed="0.383950"/>
 </kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Log" owner="BuiltIn">
-<arg>${indice}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-10-25T16:55:32.391740" elapsed="0.000000"/>
+<kw name="Wait Until Element Exist" owner="FlaUILibrary">
+<arg>${painelMesas.logoSoftcom}</arg>
+<doc>Waits until element exist or timeout was reached. If timeout was reached an FlaUIError occurred.</doc>
+<status status="PASS" start="2024-10-29T15:04:34.715623" elapsed="1.662447"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<var>${seletor_dinamico}</var>
-<arg>//Pane[@AutomationId="ControleMesa${indice}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-10-25T16:55:32.391740" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-29T15:04:34.328669" elapsed="2.049401"/>
+</kw>
+<kw name="Abrir mesa" owner="PainelDeMesasPage">
+<kw name="Click" owner="FlaUILibrary">
+<arg>//Pane[@AutomationId="ControleMesa${mesa}"]</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-29T15:04:36.380608" elapsed="2.513286"/>
+</kw>
+<arg>35</arg>
+<status status="PASS" start="2024-10-29T15:04:36.379100" elapsed="2.514794"/>
+</kw>
+<kw name="Informar cliente na mesa" owner="PainelDeMesasPage">
+<kw name="Click" owner="FlaUILibrary">
+<arg>${painelMesas.aberturaNomeCliente}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-29T15:04:38.894902" elapsed="0.750749"/>
+</kw>
+<kw name="Set Text To Textbox" owner="FlaUILibrary">
+<arg>${painelMesas.aberturaNomeCliente}</arg>
+<arg>Automacao</arg>
+<doc>Inputs value to a textbox module.</doc>
+<status status="PASS" start="2024-10-29T15:04:39.647616" elapsed="0.342999"/>
 </kw>
 <kw name="Click" owner="FlaUILibrary">
-<arg>${seletor_dinamico}</arg>
+<arg>${painelMesas.btnSalvar}</arg>
 <doc>Left click to element by an XPath.</doc>
-<status status="NOT RUN" start="2024-10-25T16:55:32.391740" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-29T15:04:39.990615" elapsed="0.441766"/>
+</kw>
+<status status="PASS" start="2024-10-29T15:04:38.894902" elapsed="1.539487"/>
+</kw>
+<kw name="Validar exibicao do cliente informado no cabecalho da mesa" owner="PainelDeMesasPage">
+<kw name="Get Text From Textbox" owner="FlaUILibrary">
+<msg time="2024-10-29T15:04:41.321442" level="INFO">${NOME_CLIENTE} =    Automacao</msg>
+<var>${NOME_CLIENTE}</var>
+<arg>${painelMesas.nomeCliente}</arg>
+<doc>Return text from textbox element.</doc>
+<status status="PASS" start="2024-10-29T15:04:40.452761" elapsed="0.870809"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-29T15:04:41.324725" level="INFO">${NOME_CLIENTE} = automacao</msg>
+<var>${NOME_CLIENTE}</var>
+<arg>"${NOME_CLIENTE.strip().lower()}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-29T15:04:41.323570" elapsed="0.002154"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${NOME_CLIENTE}</arg>
+<arg>automacao</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-29T15:04:41.325724" elapsed="0.001002"/>
+</kw>
+<status status="PASS" start="2024-10-29T15:04:40.451578" elapsed="0.875148"/>
+</kw>
+<kw name="Validar exibicao da mesa aberta no cabecalho da mesa" owner="PainelDeMesasPage">
+<kw name="Get Text From Textbox" owner="FlaUILibrary">
+<msg time="2024-10-29T15:04:41.759657" level="INFO">${NUMERO_MESA} = Mesa 35</msg>
+<var>${NUMERO_MESA}</var>
+<arg>${painelMesas.numeroMesa}</arg>
+<doc>Return text from textbox element.</doc>
+<status status="PASS" start="2024-10-29T15:04:41.327727" elapsed="0.431930"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>"${NUMERO_MESA}"</arg>
+<arg>"Mesa ${mesa}"</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-29T15:04:41.759657" elapsed="0.000000"/>
+</kw>
+<arg>35</arg>
+<status status="PASS" start="2024-10-29T15:04:41.326726" elapsed="0.433932"/>
 </kw>
 <kw name="Informar produto" owner="PainelDeMesasPage">
-<arg>11</arg>
-<status status="NOT RUN" start="2024-10-25T16:55:32.391740" elapsed="0.000999"/>
+<kw name="Click" owner="FlaUILibrary">
+<arg>${painelMesas.campoCodigoProduto}</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-29T15:04:41.761599" elapsed="0.441462"/>
+</kw>
+<kw name="Set Text To Textbox" owner="FlaUILibrary">
+<arg>${painelMesas.campoCodigoProduto}</arg>
+<arg>${codigo_produto}</arg>
+<doc>Inputs value to a textbox module.</doc>
+<status status="PASS" start="2024-10-29T15:04:42.203831" elapsed="0.311885"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>ENTER</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-29T15:04:42.516708" elapsed="0.104530"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>ENTER</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-29T15:04:42.621238" elapsed="0.102545"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>ENTER</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-29T15:04:42.723783" elapsed="0.102003"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T15:04:43.826484" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-29T15:04:42.825786" elapsed="1.000698"/>
+</kw>
+<kw name="Press Key" owner="PyAutoGuiLibrary">
+<arg>ESC</arg>
+<doc>Pressiona a tecla especificada.</doc>
+<status status="PASS" start="2024-10-29T15:04:43.826484" elapsed="0.101534"/>
+</kw>
+<arg>12</arg>
+<status status="PASS" start="2024-10-29T15:04:41.760658" elapsed="2.167360"/>
+</kw>
+<kw name="Abrir mesa" owner="PainelDeMesasPage">
+<kw name="Click" owner="FlaUILibrary">
+<arg>//Pane[@AutomationId="ControleMesa${mesa}"]</arg>
+<doc>Left click to element by an XPath.</doc>
+<status status="PASS" start="2024-10-29T15:04:43.929025" elapsed="1.824497"/>
+</kw>
+<arg>35</arg>
+<status status="PASS" start="2024-10-29T15:04:43.928018" elapsed="1.825504"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-29T15:04:55.754632" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-10-25T16:55:32.392739" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-29T15:04:45.754161" elapsed="10.001743"/>
 </kw>
-<var name="${indice}"/>
-<status status="NOT RUN" start="2024-10-25T16:55:32.391740" elapsed="0.000999"/>
-</iter>
-<var>${indice}</var>
-<value>10</value>
-<value>${NUM_MAXIMO_MESAS}</value>
-<status status="NOT RUN" start="2024-10-25T16:55:32.390739" elapsed="0.002000"/>
-</for>
 <kw name="Fechar PDV" owner="Abrir-E-Fechar-PDV" type="TEARDOWN">
 <kw name="Close Application By Name" owner="FlaUILibrary">
 <arg>Softshop.exe</arg>
 <doc>Closes the attached application by name.</doc>
-<status status="PASS" start="2024-10-25T16:55:32.392739" elapsed="0.027997"/>
+<status status="PASS" start="2024-10-29T15:04:55.757903" elapsed="0.108470"/>
 </kw>
-<status status="PASS" start="2024-10-25T16:55:32.392739" elapsed="0.027997"/>
+<status status="PASS" start="2024-10-29T15:04:55.756903" elapsed="0.110979"/>
 </kw>
-<tag>kds</tag>
-<status status="FAIL" start="2024-10-25T16:54:53.673968" elapsed="38.746768">Execution terminated by signal</status>
+<tag>painel_de_mesas</tag>
+<status status="PASS" start="2024-10-29T15:04:04.222858" elapsed="51.648541"/>
 </test>
-<status status="FAIL" start="2024-10-25T16:54:53.272999" elapsed="39.149737"/>
+<status status="PASS" start="2024-10-29T15:04:03.330554" elapsed="52.561703"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">kds</stat>
+<stat pass="1" fail="0" skip="0">painel_de_mesas</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="KDSTest">KDSTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="PainelDeMesasTest">PainelDeMesasTest</stat>
 </suite>
 </statistics>
 <errors>

@@ -7,7 +7,7 @@ Resource    ../../base.resource
 *** Keywords ***
 
 Validar que PDV abriu e carregou os dados
-    Wait Until Element Exist    ${homepage.btnNotificacoes}
+    Wait Until Element Exist    ${homepage.btnKDS}
 
 Iniciar venda clicando no botao
     Click    ${homepage.btnIniciarVenda}

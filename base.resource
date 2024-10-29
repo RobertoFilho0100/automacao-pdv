@@ -1,7 +1,7 @@
 ### Bibliotecas
 *** Settings ***
 Library    FlaUILibrary
-Library    ./Resource/scripts/PyAutoGuiLibrary.py
+Library    Resource/scripts/PyAutoGuiLibrary.py
 
 ### Utils
 Resource    Resource/utils/Abrir-E-Fechar-PDV.resource
@@ -15,7 +15,7 @@ Variables    Resource/locators/Pagamento/pagamento.yaml
 Variables    Resource/locators/PainelDeMesas/painelDeMesas.yaml
 
 
-### Pages
+### PagesO
 Resource    Resource/pages/LoginPage.resource
 Resource    Resource/pages/HomePage.resource
 Resource    Resource/pages/InformarClientePage.resource
