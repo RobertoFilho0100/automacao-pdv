@@ -1,3 +1,7 @@
 pagamento:
   logoTelaPagamento: //Pane[@AutomationId="PictureBox2"]
-  formaPagamentoDinheiro: //Edit[@AutomationId="_txtDINHEIRO"]
+  formasPagamento:
+    dinheiro: //Edit[@AutomationId="_txtDINHEIRO"]
+    pixOff: //Edit[@AutomationId="_txtPIX OFF"]
+    tefOff: //Edit[@AutomationId="_txtPOS"]
+  selectBandeira: //ComboBox[@AutomationId="cbCartaoPOS"]
