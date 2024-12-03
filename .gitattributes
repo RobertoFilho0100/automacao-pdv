@@ -1,0 +1,3 @@
+# Exclua arquivos ou diretórios da análise de linguagens
+*.html linguist-documentation
+*.xml linguist-documentation
